@@ -19,7 +19,7 @@
  * DEALINGS IN THE SOFTWARE.
  */
 #include <string.h>
-#include "../utf.h"
+#include "utf.h"
 
 char *
 utfecpy(char *to, char *end, const char *from)

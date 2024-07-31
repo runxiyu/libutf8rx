@@ -18,7 +18,7 @@
  * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-#include "../utf.h"
+#include "utf.h"
 
 #define MIN(x,y)  ((x) < (y) ? (x) : (y))
 
