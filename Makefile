@@ -1,3 +1,5 @@
+include ./config.mk
+
 AWK = awk
 UNICODE = https://unicode.org/Public/UCD/latest/ucd/UnicodeData.txt
 
@@ -22,9 +24,13 @@ OBJ =\
 	utf.o\
 	utftorunestr.o
 
-default: update lib
+default: libutf8rx.a
 
-lib: $(OBJ)
+libutf8rx.a: $(OBJ)
+	$(AR) $(ARFLAGS) $@ $?
+	$(RANLIB) $@
+
+objects: $(OBJ)
 
 update:
 	@echo Downloading and parsing $(UNICODE)
@@ -35,4 +41,4 @@ update:
 	$(CC) $(CFLAGS) -o $@ -c $<
 
 clean:
-	rm -rf $(OBJ)	
+	$(RM) $(OBJ) libutf8rx.a
