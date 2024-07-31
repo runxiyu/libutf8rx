@@ -198,7 +198,7 @@ function mkis(name, runev, runec, file, casev, casename) {
 
 	# generate case conversion function
 	if(length(casev) > 0) {
-		print "\nint\nto"casename"rune(Rune r)\n{\n\tRune *match;\n" > file;
+		print "\nRune\nto"casename"rune(Rune r)\n{\n\tRune *match;\n" > file;
 		if(rune4c > 0) {
 			print "\tmatch = bsearch(&r, "name"4, nelem("name"4), sizeof *"name"4, &rune2cmp);" > file;
 			print "\tif (match)" > file;

@@ -19,8 +19,9 @@
  * DEALINGS IN THE SOFTWARE.
  */
 #include <stdio.h>
+#include <stdint.h>
 
-typedef int Rune;
+typedef uint32_t Rune;
 
 enum {
 	UTFmax    = 6,       /* maximum bytes per rune */

@@ -247,7 +247,7 @@ isupperrune(Rune r)
 	return 0;
 }
 
-int
+Rune
 tolowerrune(Rune r)
 {
 	Rune *match;

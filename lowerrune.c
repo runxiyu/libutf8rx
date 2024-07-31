@@ -338,7 +338,7 @@ islowerrune(Rune r)
 	return 0;
 }
 
-int
+Rune
 toupperrune(Rune r)
 {
 	Rune *match;
